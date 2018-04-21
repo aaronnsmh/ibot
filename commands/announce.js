@@ -2,6 +2,8 @@ exports.run = (Discord, client, message, args) => {
 
 let allowedRole = message.guild.roles.find("name", "bot admin");	
 let thumbnail = client.user.avatarURL;
+let name = client.user.username;
+
 
  if(message.member.roles.has(allowedRole.id)) {
 		   const color = args[0]
@@ -15,7 +17,7 @@ let thumbnail = client.user.avatarURL;
 		   .setThumbnail(thumbnail)
 		   .setTitle(":mega: Announcement:")
 		   .setDescription(text)
-		   .setFooter("An announcment from " + author + " made at ")
+		   .setFooter(name + "| Announced at ")
 		   .setTimestamp()
 		   message.channel.send("Announcement from: " + author);
 		   message.channel.send({embed})
