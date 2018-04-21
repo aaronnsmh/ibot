@@ -15,6 +15,7 @@ let name = client.user.username;
 		   const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
 		   .setThumbnail(thumbnail)
+		   .setAuthor(name)
 		   .setTitle(":mega: Announcement:")
 		   .setDescription(text)
 		   .setFooter(name + "| Announced at ")
