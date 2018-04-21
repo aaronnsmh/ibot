@@ -27,16 +27,16 @@ client.on('message', message => {
 
 
 client.on('message', message => {    
-    /// if (message.mentions.members.firstKey() === '436253576537440256') {
-   /// message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
-///}
+    if (message.mentions.members.firstKey() === '436253576537440256') {
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
+}
     
     
     let sender = message.author;
     
     if (sender.bot) return;
     if (message.channel.type === 'dm') {
-        message.channel.send("**Unfortunately we can only read things in a guild (server). You can invite me here:**")
+        message.channel.send("**Unfortunately we can only read things in a guild (server). You can invite me here: https://discordapp.com/oauth2/authorize?client_id=383658506060038144&scope=bot&permissions=8200**")
         return;
     }
     
