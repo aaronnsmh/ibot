@@ -1,6 +1,5 @@
 exports.run = (Discord, client, message, args) => {
 
-    if(message.author.id !== 281060171730649089) return;
         try {
           const code = args.join(" ");
           let evaled = eval(code);
