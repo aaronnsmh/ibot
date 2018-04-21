@@ -19,6 +19,5 @@ function doMagic8BallVoodoo() {
 		   message.channel.send(":8ball: from: " + author);
 		   message.channel.send({embed})
     
-    message.channel.sendMessage(doMagic8BallVoodoo())
-    
+
 }
