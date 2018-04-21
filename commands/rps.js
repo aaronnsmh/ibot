@@ -12,7 +12,7 @@ function doMagic8BallVoodoo() {
     const author = message.author;
 		   const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-		   .setThumbnail("https://cdn.vectorstock.com/i/1000x1000/91/89/rock-paper-scissors-game-vector-3959189.jpg")
+		   .setThumbnail("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR97vFExM4v0gktH18oMQRdT1NPNySjnyE4YPKWwg7NI_NznOPT")
            	   .setAuthor(name,thumbnail)
 		   .setTitle(":fist: Rock, :raised_hand: Paper, :v: Scissors")
 		   .addField("Result: ",doMagic8BallVoodoo())
