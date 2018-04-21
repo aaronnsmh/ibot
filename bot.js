@@ -64,10 +64,10 @@ client.on('message', message => {
 
         }
     })
-
+let name = client.user.username;
 client.on('guildMemberAdd', member => {
     var embedinfo = new Discord.RichEmbed()
-        .setFooter("© ibot | Made by Aaron #1742")
+        .setFooter("© " + name + " | Made by Aaron #1742")
         .setColor(randomColor)
         .setTitle(":wave: Welcome")
         .setDescription("Use -cmds to find out about the commands!")
