@@ -8,7 +8,7 @@ let thumbnail = client.user.avatarURL;
         .setFooter("©" + name + "  | Made by Aaron#1742")
         .setAuthor(name,thumbnail)
         .setColor(randomColor)
-        .setTitle(":book:" + name + " Commands")
+        .setTitle(":book:   " + name + " Commands")
         .setDescription("Wondering what I do? Well you sir/ma'am have a very good question! Read on to see why I am here!")
         .addField(":8ball: 8Ball [QUESTION]", "Responds with what will happen.")
         .addField(":o: cointoss", "Tosses a coin.")
