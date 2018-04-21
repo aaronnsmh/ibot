@@ -11,6 +11,7 @@ let thumbnail = client.user.avatarURL;
         .setTitle(":book:   " + name + " Commands")
         .setDescription("Wondering what I do? Well you sir/ma'am have a very good question! Read on to see why I am here!")
         .addField(":8ball: 8Ball [QUESTION]", "Responds with what will happen.")
+        .addField(":gay_pride_flag:  randomcolor", "Responds with a random hex color.")
         .addField(":o: cointoss", "Tosses a coin.")
         .addField(":frame_photo: avatar [@USER]", "Shows a picture of a tagged persons avatar!")
         .addField(":loudspeaker: say [STRING]", "The bot says what you ask it to say, well duh.")
