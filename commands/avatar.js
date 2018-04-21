@@ -8,7 +8,6 @@ if(message.mentions.users.first()) { //Check if the message has a mention in it.
           let thumbnail = client.user.avatarURL;
           let author = message.author;
     
-          message.channel.sendMessage(output); //We send the output in the current channel.
           const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
 		   .setThumbnail(thumbnail)
