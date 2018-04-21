@@ -1,6 +1,7 @@
 exports.run = (Discord, client, message, args) => {
 
 let allowedRole = message.guild.roles.find("name", "bot admin");	
+let thumbnail = client.user.avatarURL;
 
  if(message.member.roles.has(allowedRole.id)) {
 		   const color = args[0]
@@ -11,7 +12,7 @@ let allowedRole = message.guild.roles.find("name", "bot admin");
 		   //const colour = args.slice(2).join("");
 		   const embed = new Discord.RichEmbed()
 		   .setColor("#00ff00")
-		   .setThumbnail("https://t6.rbxcdn.com/fad4c603a443958512e8adb3660ff221")
+		   .setThumbnail(thumbnail)
 		   .setTitle(":mega: Announcement:")
 		   .setDescription(text)
 		   .setFooter("An announcment from " + author + " made at ")
