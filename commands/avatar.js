@@ -9,6 +9,6 @@ if(message.mentions.users.first()) { //Check if the message has a mention in it.
         
           
     } else {
-          message.reply("Dat user dont exist"); //Reply with a mention saying "Invalid user."
+          message.reply("Please tag a user!"); //Reply with a mention saying "Invalid user."
     }
 }
