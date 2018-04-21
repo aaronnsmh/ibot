@@ -7,6 +7,7 @@ var randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
+    let name = client.user.username;
     client.user.setPresence({ activity: { name: 'at Koala Cafe!' }, status: 'online' })
   .then(console.log)
   .catch(console.error);
@@ -64,7 +65,7 @@ client.on('message', message => {
 
         }
     })
-let name = client.user.username;
+
 client.on('guildMemberAdd', member => {
     var embedinfo = new Discord.RichEmbed()
         .setFooter("© " + name + " | Made by Aaron #1742")
