@@ -5,12 +5,6 @@ const db = require('quick.db');
 
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
 
-client.on('ready', () => {
-    console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    client.user.setActivity('over Discord | -help', { type: 'WATCHING' });
-    client.user.setStatus("online");
-});
-
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
@@ -48,7 +42,7 @@ client.on('message', message => {
     }
     
     if (message.mentions.members.firstKey() === '422393536420511752') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:. Run -help if you need any help, or -cmds to view commands.')
     }
 
         let msg = message.content.toLowerCase();
