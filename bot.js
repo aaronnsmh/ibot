@@ -4,10 +4,11 @@ const prefix = '-';
 const db = require('quick.db');
 
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-let nameid = user.id;
+
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
+    let nameid = client.user.id;
     client.user.setPresence({ activity: { name: 'at Koala Cafe!' }, status: 'online' })
   .then(console.log)
   .catch(console.error);
