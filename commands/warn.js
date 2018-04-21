@@ -1,29 +1,24 @@
-const Discord = require('discord.js');
-exports.run = (client, message, args) => {
-  let reason = args.slice(1).join(' ');
-  let user = message.mentions.users.first();
-  let modlog = client.channels.find('name', 'mod-log');
-  if (!modlog) return message.reply('I cannot find a mod-log channel');
-  if (reason.length < 1) return message.reply('You must supply a reason for the warning.');
-  if (message.mentions.users.size < 1) return message.reply('You must mention someone to warn them.').catch(console.error);
-  const embed = new Discord.RichEmbed()
-  .setColor(0x00AE86)
-  .setTimestamp()
-  .addField('Action:', 'Warning')
-  .addField('User:', `${user.username}#${user.discriminator}`)
-  .addField('Modrator:', `${message.author.username}#${message.author.discriminator}`);
-  return client.channels.get(modlog.id).sendEmbed(embed);
-};
+exports.run = (guild, message, args) => {
+    let modRole = message.guild.roles.find("name", "Staff");
+    if(message.member.roles.has(modRole.id)) {
+        let reason = args.slice(1).join(' ');
+        let user = message.mentions.users.first();
+        let modlog = guild.channels.find('name', 'mod-log');
 
-exports.conf = {
-  enabled: true,
-  guildOnly: false,
-  aliases: [],
-  permLevel: 0
-};
+        if (!modlog) 
+            return message.reply('I cannot find a mod-log channel');
 
-exports.help = {
-  name: 'warn',
-  description: 'Issues a warning to the mentioned user.',
-  usage: 'warn [mention]'
+        if (reason.length < 1) 
+            return message.reply('You must supply a reason for the warning.');
+
+        if (message.mentions.users.size < 1) 
+            return message.reply('You must mention someone to warn them.').catch(console.error);
+
+        const embed = new Discord.RichEmbed()
+            .setColor(0x8cff00)
+            .setTimestamp()
+            .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
+
+        return guild.channels.get(modlog.id).send({embed});
+    }
 };
