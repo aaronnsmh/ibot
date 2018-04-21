@@ -1,6 +1,4 @@
 exports.run = (guild, message, args) => {
-    let modRole = message.guild.roles.find("name", "Staff");
-    if(message.member.roles.has(modRole.id)) {
         let reason = args.slice(1).join(' ');
         let user = message.mentions.users.first();
         let modlog = message.channels.find("name", "mod-log");
@@ -20,5 +18,4 @@ exports.run = (guild, message, args) => {
             .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
 
         return guild.channels.get(modlog.id).send({embed});
-    }
 };
