@@ -5,7 +5,7 @@ let name = client.user.username;
 let thumbnail = client.user.avatarURL;
     message.reply("Commands:");
     var embedcmds= new Discord.RichEmbed()
-        .setFooter("©" + name + "  | Made by Aaron#1742")
+        .setFooter("© " + name + "  | Made by Aaron#1742")
         .setAuthor(name,thumbnail)
         .setColor(randomColor)
         .setTitle(":book:   " + name + " Commands")
