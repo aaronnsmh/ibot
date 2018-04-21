@@ -27,8 +27,12 @@ client.on('message', message => {
 
 
 client.on('message', message => {    
-    if (message.mentions.members.firstKey() === '436253576537440256') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
+    if (message.mentions.members.firstKey() === '383658506060038144') {
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:, if you need me run -cmds to check out the commands!')
+    } else if message.mentions.members.firstKey() === '437275732884979723') {
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:, if you need me run -cmds to check out the commands!')
+    } else if message.mentions.members.firstKey() === '437158445075136512') {
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:, if you need me run -cmds to check out the commands!')
 }
     
     
