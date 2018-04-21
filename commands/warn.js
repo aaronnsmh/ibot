@@ -3,7 +3,7 @@ exports.run = (guild, message, args) => {
     if(message.member.roles.has(modRole.id)) {
         let reason = args.slice(1).join(' ');
         let user = message.mentions.users.first();
-        let modlog = guild.channels.find('name', 'mod-log');
+        let modlog = message.channels.find("name", "mod-log");
 
         if (!modlog) 
             return message.reply('I cannot find a mod-log channel');
