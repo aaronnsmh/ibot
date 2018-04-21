@@ -4,7 +4,7 @@ const prefix = '-';
 const db = require('quick.db');
 
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-let nameid = client.user.id;
+let nameid = user.id;
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
