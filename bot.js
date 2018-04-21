@@ -4,7 +4,7 @@ const prefix = '-';
 const db = require('quick.db');
 
 var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-
+let nameid = client.user.id;
 
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
@@ -27,13 +27,9 @@ client.on('message', message => {
 
 
 client.on('message', message => {    
-    if (message.mentions.members.firstKey() === '383658506060038144') {
+    if (message.mentions.members.firstKey() === nameid) {
     message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:, if you need me run -cmds to check out the commands!')
-    } else if message.mentions.members.firstKey() === '437275732884979723') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:, if you need me run -cmds to check out the commands!')
-    } else if message.mentions.members.firstKey() === '437158445075136512') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:, if you need me run -cmds to check out the commands!')
-}
+   }
     
     
     let sender = message.author;
