@@ -13,6 +13,7 @@ let thumbnail = client.user.avatarURL;
         .addField(":8ball: 8Ball [QUESTION]", "Responds with what will happen.")
         .addField(":gay_pride_flag:  randomcolor", "Responds with a random hex color.")
         .addField(":o: cointoss", "Tosses a coin.")
+        .addField(":mailbox_with_mail: purge [NUMBER]", "Deletes a specified amount of messages.")
         .addField(":frame_photo: avatar [@USER]", "Shows a picture of a tagged persons avatar!")
         .addField(":loudspeaker: say [STRING]", "The bot says what you ask it to say, well duh.")
         .addField(":fire: kick/ban [@USER] [REASON]", "The bot kicks/bans the user with the reason you put. Tut tut!")
