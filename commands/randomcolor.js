@@ -1,6 +1,7 @@
-var randomColor = Math.floor(Math.random() * 16777215).toString(16);
+
 
 exports.run = (Discord, client, message, args) => {
+var randomColor = Math.floor(Math.random() * 16777215).toString(16);
 let name = client.user.username;
 let thumbnail = client.user.avatarURL;
 let colour1 = randomColor
