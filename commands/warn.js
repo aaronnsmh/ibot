@@ -19,5 +19,5 @@ exports.run = (Discord, client, message, args) => {
         message.channel.send(`**${user.tag}** has been warned succsesfully for ${reason}`);
         message.user.send(`You have been warned for **${reason}** by ${message.author.tag}`);
         
-        staffc.send({embed}); return
+        staffc.send({embed});
 }
