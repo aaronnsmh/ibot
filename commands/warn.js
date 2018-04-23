@@ -17,5 +17,5 @@ exports.run = (Discord, client, message, args) => {
             .setTimestamp()
             .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
 
-        guild.channels.get(staffc.id).send({embed}); return
-};
+        modlog.send({embed}); return
+}
