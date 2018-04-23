@@ -13,13 +13,19 @@ let thumbnail = client.user.avatarURL;
         .addField(":8ball: 8Ball [QUESTION]", "Responds with what will happen.")
         .addField(":gay_pride_flag:  randomcolor", "Responds with a random hex color.")
         .addField(":o: cointoss", "Tosses a coin.")
-        .addField(":mailbox_with_mail: purge [NUMBER]", "Deletes a specified amount of messages.")
         .addField(":frame_photo: avatar [@USER]", "Shows a picture of a tagged persons avatar!")
+        .addField(":clock1: More CMDS coming soon", "What do you expect me to put here?")
+    var admin= new Discord.RichEmbed()
+        .setFooter("© " + name + "  | Made by Aaron#1742")
+        .setTitle("Admin Commands")
+        .setColor(randomColor)
         .addField(":loudspeaker: say [STRING]", "The bot says what you ask it to say, well duh.")
         .addField(":fire: kick/ban [@USER] [REASON]", "The bot kicks/bans the user with the reason you put. Tut tut!")
         .addField(":exclamation: announce [TITLE] [DESCRIPTION]", "Announces whatever you put in the channel you write it in.")
-        .addField(":clock1: More CMDS coming soon", "What do you expect me to put here?")
+        .addField(":mailbox_with_mail: purge [NUMBER]", "Deletes a specified amount of messages.")
     message.channel.sendEmbed(embedcmds);
+    if (!message.member.hasPermission("MANAGE_MESSAGES")) return
+    message.channel.sendEmbed(admin);
     message.delete(10000)
 
 }
