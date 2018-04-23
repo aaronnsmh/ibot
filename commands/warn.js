@@ -16,8 +16,8 @@ exports.run = (Discord, client, message, args) => {
             .setColor(0x8cff00)
             .setTimestamp()
             .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
-        message.channel.send(`**${user.tag}** has been warned succsesfully for ${reason}`.);
-        message.user.send('You have been warned for **${reason}** by ${message.author.tag}
+        message.channel.send(`**${user.tag}** has been warned succsesfully for ${reason}`);
+        message.user.send(`You have been warned for **${reason}** by ${message.author.tag}`);
         
         staffc.send({embed}); return
 }
