@@ -17,5 +17,5 @@ exports.run = (Discord, client, message, args) => {
             .setTimestamp()
             .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
 
-        modlog.send({embed}); return
+        staffc.send({embed}); return
 }
