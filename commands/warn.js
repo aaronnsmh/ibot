@@ -1,7 +1,7 @@
 exports.run = (Discord, client, message, args) => {
         let reason = args.slice(1).join(" ");
         let user = message.mentions.users.first();
-        let modlog = message.channel.id === '437282530660712480';
+        let modlog = message.guild.channels.find("name", "logs");
 
         if (!modlog) 
             return message.reply('I cannot find a mod-log channel');
