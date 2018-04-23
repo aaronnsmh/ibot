@@ -6,7 +6,7 @@ exports.run = (Discord, client, message, args) => {
         if (!message.member.hasPermission("MANAGE_MESSAGES")) return message.channel.send("No can do pal!");
         
         if (!staffc) 
-            return message.reply('I cannot find a mod-log channel');
+            return message.reply('I cannot find a "log" channel');
 
         if (reason.length < 1) 
             return message.reply('You must supply a reason for the warning.');
