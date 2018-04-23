@@ -27,6 +27,10 @@ client.on('message', message => {
 
 
 
+client.on('message', message => {    
+    if (message.mentions.members.firstKey() === '383658506060038144') {
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:, if you need me run -cmds to check out the commands!')
+   }
     
     
     let sender = message.author;
@@ -40,17 +44,6 @@ client.on('message', message => {
     if (message.mentions.members.firstKey() === '422393536420511752') {
     message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:. Run -help if you need any help, or -cmds to view commands.')
     }
-
-    client.on('guildMemberAdd', member => {
-        let name = client.user.username;
-    var embedinfo = new Discord.RichEmbed()
-        .setFooter("© " + name + " | Made by Aaron #1742")
-        .setColor(randomColor)
-        .setTitle(":wave: Welcome")
-        .setDescription("Use -cmds to find out about the commands!")
-     member.sendEmbed(embedinfo);
-       console.log(`${member.user.username} has joined`);
-});
 
         let msg = message.content.toLowerCase();
         let args = message.content.slice(prefix.length).trim().split(" ");
@@ -74,7 +67,16 @@ client.on('message', message => {
         }
     })
 
-
+client.on('guildMemberAdd', member => {
+        let name = client.user.username;
+    var embedinfo = new Discord.RichEmbed()
+        .setFooter("© " + name + " | Made by Aaron #1742")
+        .setColor(randomColor)
+        .setTitle(":wave: Welcome")
+        .setDescription("Use -cmds to find out about the commands!")
+     member.sendEmbed(embedinfo);
+       console.log(`${member.user.username} has joined`);
+});
 
 ////////////////////////////////////////////////////////////
 
