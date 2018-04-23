@@ -41,9 +41,7 @@ client.on('message', message => {
         return;
     }
     
-    if (message.mentions.members.firstKey() === '422393536420511752') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:. Run -help if you need any help, or -cmds to view commands.')
-    }
+   
 
         let msg = message.content.toLowerCase();
         let args = message.content.slice(prefix.length).trim().split(" ");
