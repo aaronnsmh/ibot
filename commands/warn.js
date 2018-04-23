@@ -1,7 +1,7 @@
 exports.run = (Discord, client, message, args) => {
         let reason = args.slice(1).join(" ");
         let user = message.mentions.users.first();
-        let modlog = message.guild.channels.find("name", "logs");
+        let staffc = message.guild.channels.find("name", "support-staff")
 
         if (!modlog) 
             return message.reply('I cannot find a mod-log channel');
@@ -17,5 +17,5 @@ exports.run = (Discord, client, message, args) => {
             .setTimestamp()
             .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
 
-        guild.channels.get(modlog.id).send({embed}); return
+        guild.channels.get(staffc.id).send({embed}); return
 };
