@@ -3,7 +3,7 @@ exports.run = (Discord, client, message, args) => {
         let user = message.mentions.users.first();
         let staffc = message.guild.channels.find("name", "support-staff")
 
-        if (!modlog) 
+        if (!staffc) 
             return message.reply('I cannot find a mod-log channel');
 
         if (reason.length < 1) 
