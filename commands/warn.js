@@ -17,5 +17,5 @@ exports.run = (guild, message, args) => {
             .setTimestamp()
             .setDescription(`**Action:** Warning\n**Target:** ${user.tag}\n**Moderator:** ${message.author.tag}\n**Reason:** ${reason}`);
 
-        return guild.channels.get(modlog.id).send({embed});
+        guild.channels.get(modlog.id).send({embed}); return
 };
