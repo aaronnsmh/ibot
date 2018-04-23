@@ -1,4 +1,4 @@
-exports.run = (guild, message, args) => {
+exports.run = (Discord, client, message, args) => {
         let reason = args.slice(1).join(" ");
         let user = message.mentions.users.first();
         let modlog = message.channels.find("name", "mod-log");
