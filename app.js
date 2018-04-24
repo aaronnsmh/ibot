@@ -32,16 +32,7 @@ client.on('message', message => {
     message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry: My prefix is -')
    }
    
-client.on('guildMemberAdd', member => {
-        let name = client.user.username;
-    var embedinfo = new Discord.RichEmbed()
-        .setFooter("© " + name + " | Made by Aaron #1742")
-        .setColor(randomColor)
-        .setTitle(":wave: Welcome")
-        .setDescription("Use -cmds to find out about the commands!")
-     member.sendEmbed(embedinfo);
-       console.log(`${member.user.username} has joined`);
-});
+
 
         let msg = message.content.toLowerCase();
         let args = message.content.slice(prefix.length).trim().split(" ");
