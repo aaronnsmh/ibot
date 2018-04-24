@@ -15,14 +15,11 @@ client.on('ready', () => {
 });
 
 
-client.on('message', message => {    
-    
-       let sender = message.author;
-       
-       });
-    
-if (sender.bot) return;
-   
+client.on('message', message => {
+
+    let sender = message.author;
+
+    if (sender.bot) return;
     if (message.channel.type === 'dm') {
         var embederrordm = new Discord.RichEmbed()
         .setTitle('Error 404:')
@@ -33,6 +30,9 @@ if (sender.bot) return;
         message.channel.send(embederrordm);
         return;
     }
+}
+    
+
    
    
    if (message.mentions.members.firstKey() === '437524390280822784') {
