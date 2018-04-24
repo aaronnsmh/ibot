@@ -1,11 +1,11 @@
-// Go-Karting Xtreme Discord Bot Code
+// ibot
 // Version: 0.9 PRE-ALPHA / PRE-REALEASE
-// Discord Code: GR9qVVd
+// Discord Code: 
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
-const prefix = '=';
+const prefix = '-';
 
    
 client.on('ready', () => {
