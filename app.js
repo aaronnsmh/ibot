@@ -1,43 +1,36 @@
-// Go-Karting Xtreme Discord Bot Code
+// ibot
 // Version: 0.9 PRE-ALPHA / PRE-REALEASE
 // Discord Code: GR9qVVd
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const db = require('quick.db');
-const prefix = '=';
+const prefix = '-';
 
    
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    client.user.setActivity('over Go-Karting Xtreme | =help', { type: 'WATCHING' });
+    client.user.setActivity('with discord.js | -help', { type: 'PLAYING' });
     client.user.setStatus("online");
 });
 
-
-client.on('message', message => {    
+client.on('guildMemberAdd', member => {
+        let name = client.user.username;
+    var embedinfo = new Discord.RichEmbed()
+        .setFooter("© " + name + " | Made by Aaron #1742")
+        .setColor(randomColor)
+        .setTitle(":wave: Welcome")
+        .setDescription("Use -cmds to find out about the commands!")
+     member.sendEmbed(embedinfo);
+       console.log(`${member.user.username} has joined`);
+});
     
-       let sender = message.author;
-       let allowedRole = message.guild.roles.find("name", "Board Of Executives");
-       let allowedRoleTwo = message.guild.roles.find("name", "Chief Executive Officer");
-
-       if (message.channel.id === '422091691604967425') {
-       if(message.member.roles.has(allowedRole.id)) {
-         message.channel.send("Message Allowed :ballot_box_with_check:")
-       } else if(message.member.roles.has(allowedRoleTwo.id)) {
-         message.channel.send("Message Allowed :ballot_box_with_check:")
-       } else if (sender.bot) {
-         message.delete(5000)
-       } else {
-         message.delete()
-       }}
-    
-if (sender.bot) return;
+if (message.author.bot) return;
    
     if (message.channel.type === 'dm') {
         var embederrordm = new Discord.RichEmbed()
         .setTitle('Error 404:')
-        .setDescription('Our system can only detect things in the GKX guild. Join our server, with the code: `jBENN5z`!')
+        .setDescription('Our system can only detect things in the a guild.')
         .setImage('https://media.giphy.com/media/gU25raLP4pUu4/giphy.gif')
         .setFooter('Error 404: DM Message')
         .setColor('#000000');
@@ -47,7 +40,7 @@ if (sender.bot) return;
    
    
    if (message.mentions.members.firstKey() === '437524390280822784') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry: If you need me use -help or -cmds!')
    }
 
         let msg = message.content.toLowerCase();
