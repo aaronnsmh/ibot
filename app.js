@@ -21,15 +21,8 @@ client.on('message', message => {
 
     if (sender.bot) return;
     if (message.channel.type === 'dm') {
-        var embederrordm = new Discord.RichEmbed()
-        .setTitle('Error 404:')
-        .setDescription('Our system can only detect things in a guild.')
-        .setImage('https://media.giphy.com/media/gU25raLP4pUu4/giphy.gif')
-        .setFooter('Error 404: DM Message')
-        .setColor('#000000');
-        message.channel.send(embederrordm);
+        message.channel.send("**Unfortunately we can only read things in guilds (servers). Please use our commands in a server with `BloxiCord` in!** *If you believe there is a problem, please contact a server administator or contact our support team.*")
         return;
-    }
 }
     
 
