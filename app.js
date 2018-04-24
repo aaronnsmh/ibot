@@ -17,7 +17,7 @@ client.on('ready', () => {
 client.on('message', message => {    
     
        let sender = message.author;
-}
+});
     
 if (sender.bot) return;
    
