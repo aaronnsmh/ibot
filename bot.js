@@ -1,41 +1,19 @@
+// ibot
+// Version: 0.9 PRE-ALPHA / PRE-REALEASE
+// Discord Code: GR9qVVd
+
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const prefix = '-';
 const db = require('quick.db');
+const prefix = '-';
 
-var randomColor = Math.floor(Math.random() * 16777215).toString(16);
-
-
+   
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    client.user.setActivity(' nothing | =-help', { type: 'WATCHING' });
+    client.user.setActivity('with discord.js | -help', { type: 'PLAYING' });
     client.user.setStatus("online");
 });
 
-
-client.on('message', message => { 
-    let sender = message.author;
-}
-          
-if (sender.bot) return;
-
-     if (message.channel.type === 'dm') {
-        var embederrordm = new Discord.RichEmbed()
-        .setTitle('Error 404:')
-        .setDescription('Our system can only detect things in a guild!')
-        .setImage('https://media.giphy.com/media/gU25raLP4pUu4/giphy.gif')
-        .setFooter('Error 404: DM Message')
-        .setColor('#000000');
-        message.channel.send(embederrordm);
-        return;
-    }
-    
-client.on("message", message => {
-  const prefixMention = new RegExp(`^<@!?${client.user.id}> `);
-  prefix = prefixMention.match(message.content) ? message.content.match(prefixMention)[0] + " " : prefix;
-    message.channel.send(`Hi there! How can I help? My prefix is '-'.`);
-}
- 
 client.on('guildMemberAdd', member => {
         let name = client.user.username;
     var embedinfo = new Discord.RichEmbed()
@@ -46,6 +24,24 @@ client.on('guildMemberAdd', member => {
      member.sendEmbed(embedinfo);
        console.log(`${member.user.username} has joined`);
 });
+    
+if (message.author.bot) return;
+   
+    if (message.channel.type === 'dm') {
+        var embederrordm = new Discord.RichEmbed()
+        .setTitle('Error 404:')
+        .setDescription('Our system can only detect things in the a guild.')
+        .setImage('https://media.giphy.com/media/gU25raLP4pUu4/giphy.gif')
+        .setFooter('Error 404: DM Message')
+        .setColor('#000000');
+        message.channel.send(embederrordm);
+        return;
+    }
+   
+   
+   if (message.mentions.members.firstKey() === '437524390280822784') {
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry: If you need me use -help or -cmds!')
+   }
 
         let msg = message.content.toLowerCase();
         let args = message.content.slice(prefix.length).trim().split(" ");
@@ -64,17 +60,10 @@ client.on('guildMemberAdd', member => {
 
         } finally {
 
-            console.log(`${message.author.username} ran the command: ${cmd} sucessfully!`);
+            console.log(`${message.author.username} ${message.author.id} ran the command: ${cmd} probably unsuccsesfully!`);
 
         }
     })
 
 
-
-////////////////////////////////////////////////////////////
-
-
-
-
-// THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
