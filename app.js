@@ -1,6 +1,6 @@
-// ibot
+//ibot Discord Bot Code
 // Version: 0.9 PRE-ALPHA / PRE-REALEASE
-// Discord Code: GR9qVVd
+
 
 const Discord = require('discord.js');
 const client = new Discord.Client();
@@ -10,18 +10,22 @@ const prefix = '-';
    
 client.on('ready', () => {
     console.log(`Logged in as ${client.user.tag}! There are no apparent major bugs.`);
-    client.user.setActivity('with discord.js | -help', { type: 'PLAYING' });
+    client.user.setActivity('with Discord.js | -help', { type: 'WATCHING' });
     client.user.setStatus("online");
 });
 
 
+client.on('message', message => {    
     
-if (message.author.bot) return;
+       let sender = message.author;
+});
+    
+if (sender.bot) return;
    
     if (message.channel.type === 'dm') {
         var embederrordm = new Discord.RichEmbed()
         .setTitle('Error 404:')
-        .setDescription('Our system can only detect things in the a guild.')
+        .setDescription('Our system can only detect things in a guild!')
         .setImage('https://media.giphy.com/media/gU25raLP4pUu4/giphy.gif')
         .setFooter('Error 404: DM Message')
         .setColor('#000000');
@@ -31,7 +35,7 @@ if (message.author.bot) return;
    
    
    if (message.mentions.members.firstKey() === '437524390280822784') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry: If you need me use -help or -cmds!')
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
    }
 
         let msg = message.content.toLowerCase();
