@@ -14,14 +14,10 @@ client.on('ready', () => {
     client.user.setStatus("online");
 });
 
+
+
 client.on('guildMemberAdd', member => {
-        let name = client.user.username;
-    var embedinfo = new Discord.RichEmbed()
-        .setFooter("© " + name + " | Made by Aaron #1742")
-        .setColor(randomColor)
-        .setTitle(":wave: Welcome")
-        .setDescription("Use -cmds to find out about the commands!")
-     member.sendEmbed(embedinfo);
+       member.send("Welcome to the server, ${member.user.username}, say -help to view bot help!")
        console.log(`${member.user.username} has joined`);
 });
     
