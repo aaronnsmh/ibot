@@ -18,19 +18,8 @@ client.on('ready', () => {
 client.on('message', message => {    
     
        let sender = message.author;
-       let allowedRole = message.guild.roles.find("name", "Board Of Executives");
-       let allowedRoleTwo = message.guild.roles.find("name", "Chief Executive Officer");
-
-       if (message.channel.id === '422091691604967425') {
-       if(message.member.roles.has(allowedRole.id)) {
-         message.channel.send("Message Allowed :ballot_box_with_check:")
-       } else if(message.member.roles.has(allowedRoleTwo.id)) {
-         message.channel.send("Message Allowed :ballot_box_with_check:")
-       } else if (sender.bot) {
-         message.delete(5000)
-       } else {
-         message.delete()
-       }}
+       
+       }
     
 if (sender.bot) return;
    
