@@ -28,8 +28,8 @@ client.on('message', message => {
 
    
    
-   if (message.mentions.members.firstKey() === '437524390280822784') {
-    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry:')
+   if (message.mentions.members.firstKey() === '383658506060038144') {
+    message.channel.send(':zzz: :zzz: :sleeping: You woke me. How rude! :angry: My prefix is -')
    }
    
 client.on('guildMemberAdd', member => {
