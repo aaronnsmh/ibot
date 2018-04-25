@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "discord.js": "^11.2.1",
-    "quick.db": "^5.3.5"
+    "quick.db": "^5.3.5",
+    "superagent": "^3.8.2"
   }
 }
