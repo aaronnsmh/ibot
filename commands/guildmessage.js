@@ -5,7 +5,7 @@ if(message.author.id !== "281060171730649089") return;
 let guildList = client.guilds;
 try {
     guildList.forEach((g) => {
-        let firstChannel = g.channels.filter(c => c.type === "text").first();
+        let firstChannel = g.channels.filter(c => c.type === "text");
         firstChannel.send(args.join(" "));
     });
 } catch(err) {
